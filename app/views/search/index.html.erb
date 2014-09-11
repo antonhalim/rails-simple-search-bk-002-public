@@ -1,5 +1,5 @@
 <h1>Search Results</h1>
 
 <% @results.each do |result| %>
-  <p><%= link_to result, word_path(result) %></p>
+  <p><%= link_to result.name, word_path(result) %></p>
 <% end %>

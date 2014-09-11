@@ -1,14 +1,19 @@
 ---
-tags: search, rails, intermediate, WIP
+tags: search, rails, intermediate, SQL, WIP
 language: ruby
 resources: 0 
 ---
 
-## Implementing a Simple Search Feature in Rails
+### Implementing a Simple Search Feature in Rails
 
-In this lab, we're going to build search functionality for a Rails app.
+## Objectives
 
-Our app is super simple. We have a database of random words. The database will be populated by a seed file. We're using Faker to generate random words. This is going to be a super popular app, clearly.
+* Learn how to build a basic search feature for a Rails application
+* Incorporate SQL into ActiveRecord queries for precise database querying
+
+## Setup
+
+Our app is super simple. We have a database of random words. The database will be populated by a seed file (we're using Faker to generate random words). This is going to be a super popular app, clearly.
 
 ### Application flow
 
@@ -31,12 +36,6 @@ Our app is super simple. We have a database of random words. The database will b
 * Search Bar on a root page (handled by a welcome controller). The search bar should be a form that submits (as a GET request) to render the search results, which is handled by the index method on the search controller.
 
 **Pass the model and feature tests**
-
-### Bonus Fancy
-
-You know that thing Google does where it gives suggested searches when you type into the search bar? Let's do that.
-
-Implement an Ajax call to the database that begins querying as we type.
 
 ## Up Next
 

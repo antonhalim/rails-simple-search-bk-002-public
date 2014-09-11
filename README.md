@@ -1,5 +1,5 @@
 ---
-tags: search, rails, intermediate, SQL, WIP
+tags: search, rails, intermediate, SQL, partials
 language: ruby
 resources: 0 
 ---
@@ -21,6 +21,7 @@ Our app is super simple. We have a database of random words. The database will b
   * check if the word exists exactly in the words table (aka conduct an **Exact Search**)
   * check if something LIKE the query exists in the words table (aka conduct a **Fuzzy Search**)
 * Upon submitting the search query, the user should either be shown a page of the search results, or be redirected to the exact word match
+* If the query returns nothing, a message should appear on the results page indicating that
 
 ### What You Need
 

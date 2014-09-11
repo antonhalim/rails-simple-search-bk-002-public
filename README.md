@@ -1,40 +1,45 @@
-# Rails Simple Search
+---
+tags: search, rails, intermediate, WIP
+language: ruby
+resources: 0 
+---
 
-## Description
+## Implementing a Simple Search Feature in Rails
 
-Add a short description of your app.
+In this lab, we're going to build search functionality for a Rails app.
 
-## Screenshots
+Our app is super simple. We have a database of random words. The database will be populated by a seed file. We're using Faker to generate random words. This is going to be a super popular app, clearly.
 
-Add some spiffy screenshots of your app here.
+### Application flow
 
-## Background
+* A user should be able to type in a phrase into the search form, and our application should do the following:
+  * check if the word exists exactly in the words table (aka conduct an **Exact Search**)
+  * check if something LIKE the query exists in the words table (aka conduct a **Fuzzy Search**)
+* Upon submitting the search query, the user should either be shown a page of the search results, or be redirected to the exact word match
 
-Why did you want to make this app? What was your development process
-like?
+### What You Need
 
-## Features
+* Appropriate migration for word table
+* Word Model
+* Search class (which does not need to inherit from ActiveRecord::Base)
+* Words Controller
+* Search Controller
+* Corresponding routes
+* search/index view to render search results
+* words/index view to render list of all words which link to their show pages
+* words/show view to render one word
+* Search Bar on a root page (handled by a welcome controller). The search bar should be a form that submits (as a GET request) to render the search results, which is handled by the index method on the search controller.
 
-Bullet point some of the key features of your app here.
+**Pass the model and feature tests**
 
-## Usage
+### Bonus Fancy
 
-How do users use your app?
+You know that thing Google does where it gives suggested searches when you type into the search bar? Let's do that.
 
-## Development/Contribution
+Implement an Ajax call to the database that begins querying as we type.
 
-Explain how people can contribute to your app. How should they write tests?
-Any things in particular you'd like to see in pull requests?
+## Up Next
 
-## Future
+Building a more sophisticated search functionality with Elastic Search.
 
-What features are you currently working on? Only mention things that you
-actually are implementing. No pie-in-the-sky-never-gonna-happen stuff.
-
-## Author
-
-Link to your blog, twitter, etc!
-
-## License
-
-Rails Simple Search is MIT Licensed. See LICENSE for details.
+## Resources

@@ -41,5 +41,3 @@ Our app is super simple. We have a database of random words. The database will b
 ## Up Next
 
 Building a more sophisticated search functionality with Elastic Search.
-
-## Resources

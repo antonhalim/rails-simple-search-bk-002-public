@@ -1,0 +1,9 @@
+<% if @word.empty? %>
+	No results matching that query.
+<% else %>
+	<% @word.each do |word| %>
+	<p>
+		<a href="/words/#{word.id}"><%= word.name %></a>
+	</p>
+	<% end %>
+<% end %>

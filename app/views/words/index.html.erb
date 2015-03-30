@@ -3,7 +3,7 @@
 <% else %>
 	<% @word.each do |word| %>
 	<p>
-		<a href="/words/#{word.id}"><%= word.name %></a>
+<%= link_to word.name, word %>
 	</p>
 	<% end %>
 <% end %>
